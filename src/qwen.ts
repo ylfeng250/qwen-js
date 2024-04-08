@@ -124,6 +124,13 @@ export class QwenClient {
     this.messages.push({ role: Role.Assistant, content });
   }
 
+  addSystemMessage(content: string): void {
+    if (this.messages[0].role === Role.System) {
+      this.messages[0].content = content;
+    } else {
+      this.messages.unshift({ role: Role.System, content });
+    }
+  }
   clearMessages(): void {
     this.messages = [{ role: Role.System, content: this.systemPrompt }];
   }

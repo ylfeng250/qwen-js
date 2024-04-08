@@ -36,7 +36,8 @@ export class Interpreter {
       const prompt = isInitial
         ? promptTemplate.replace('{GOAL}', input)
         : input;
-      const res = await this.qwenClient.chat(prompt);
+      this.qwenClient.addSystemMessage(prompt);
+      const res = await this.qwenClient.chat('现在请告诉我如何实现目标！');
       const content = getResponseString(res);
       const parsed = await this.parseResult(content);
       await this.proceedResult(parsed);

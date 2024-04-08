@@ -18,7 +18,6 @@ const promptTemplate = `
 - 在您的最后一行写**DONE**，表示实现目标的步骤已经全部返回。
 
 Begin！
-现在请告诉我如何实现目标：
 `;
 
 const errorPromptTemplate = `
