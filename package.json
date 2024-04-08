@@ -1,0 +1,24 @@
+{
+  "name": "qwen-js",
+  "version": "0.0.1",
+  "description": "通义千问的前端 SDK",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "fetchQwen": "ts-node ./examples/fetchQwen.ts",
+    "qwenClient": "ts-node ./examples/qwenClient.ts",
+    "interperter": "ts-node ./examples/interperter.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "esm": "^3.2.25",
+    "prettier": "^3.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.4"
+  },
+  "dependencies": {
+    "axios": "^1.6.8"
+  }
+}
